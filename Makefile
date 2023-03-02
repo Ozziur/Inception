@@ -6,7 +6,7 @@
 #    By: mruizzo <mruizzo@student.42roma.it>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/28 15:05:45 by mruizzo           #+#    #+#              #
-#    Updated: 2023/03/02 15:14:27 by mruizzo          ###   ########.fr        #
+#    Updated: 2023/03/02 19:46:03 by mruizzo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,3 @@ start :
 
 status : 
 	@docker ps
-re :
-	down
-	up
-	status

@@ -62,7 +62,7 @@ services:
       - inception
     restart: always
 
-adminer:
+  adminer:
     container_name: adminer
     build: ./requirements/bonus/adminer/.
     image: adminer:42

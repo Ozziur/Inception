@@ -35,6 +35,7 @@ services:
     env_file:
       - .env
     restart: always
+
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress/.
@@ -48,6 +49,7 @@ services:
     networks:
       - inception
     restart: always
+
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb/.
@@ -59,3 +61,33 @@ services:
     networks:
       - inception
     restart: always
+
+adminer:
+    container_name: adminer
+    build: ./requirements/bonus/adminer/.
+    image: adminer:42
+    depends_on:
+      - mariadb
+    ports:
+      - "600:80"
+    networks:
+      - inception
+    restart: always
+
+  # ftp:
+  #   container_name: ftp
+  #   build: ./requirements/bonus/ftp/.
+  #   image: ftp:42
+  #   depends_on:
+  #     - wordpress
+  #   volumes:
+  #     -wordpress: home/mruizzo/ftp/files
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "21:21"
+  #     - "20:20"
+  #     - "40000-40005:40000-40005"
+  #   networks:
+  #     - inception
+  #   restart: always

@@ -94,7 +94,7 @@ services:
 
   redis:
     container_name: redis
-    build: ./requirements/bonus/redis/
+    build: ./requirements/bonus/redis/.
     image: redis:42
     volumes:
       - wordpress:/var/www/html
@@ -102,4 +102,19 @@ services:
       - wordpress
     networks:
       - inception
+    restart: always
+
+  cadvisor:
+    container_name: cadvisor
+    build: ./requirements/bonus/cadvisor/.
+    image: cadvisor:42
+    ports:
+      - "8080:8080"
+    networks:
+      - inception
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro 
+      - /sys:/sys:ro 
+      - /var/lib/docker/:/var/lib/docker:ro
     restart: always

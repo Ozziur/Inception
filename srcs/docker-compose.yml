@@ -81,7 +81,7 @@ services:
     depends_on:
       - wordpress
     volumes:
-      -wordpress: /home/mruizzo/ftp/files
+      - wordpress:/home/mruizzo/ftp/files
     env_file:
       - .env
     ports:

@@ -118,3 +118,16 @@ services:
       - /sys:/sys:ro 
       - /var/lib/docker/:/var/lib/docker:ro
     restart: always
+
+  site:
+    container_name: site
+    build: ./requirements/bonus/site/.
+    image: site:42
+    ports:
+      - "1111:1111"
+    networks:
+      - inception
+    depends_on:
+      - nginx
+    restart: always
+

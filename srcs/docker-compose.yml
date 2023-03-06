@@ -70,6 +70,8 @@ services:
       - mariadb
     ports:
       - "600:80"
+    expose:
+      - "9000"
     networks:
       - inception
     restart: always

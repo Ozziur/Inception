@@ -23,7 +23,7 @@ echo "
 local_enable=YES
 allow_writeable_chroot=YES
 pasv_enable=YES
-local_root=/home/mruiizzo/ftp
+local_root=/home/mruizzo/ftp
 pasv_min_port=40000
 pasv_max_port=40005
 userlist_file=/etc/vsftpd.userlist" >> /etc/vsftpd.conf

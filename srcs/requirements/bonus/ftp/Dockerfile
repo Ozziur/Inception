@@ -1,11 +1,9 @@
-FROM debian:buster
+FROM alpine:3.15.0
 
-RUN apt update -y
+RUN	apk update && apk upgrade && apk add --no-cache \
+        vsftpd
 
-RUN apt install vsftpd -y
+COPY conf/vsftpd.conf /tmp/vsftpd.conf
 
-COPY ./tools/script.sh /
-RUN chmod +x /script.sh
-
-
-CMD ["/script.sh"]
+COPY tools/server_ftp.sh /tmp/server_ftp.sh
+ENTRYPOINT ["sh", "/tmp/server_ftp.sh"]

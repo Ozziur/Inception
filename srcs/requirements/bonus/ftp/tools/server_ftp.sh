@@ -1,5 +1,3 @@
-#!/bin/sh
-
 if [ ! -f "/etc/vsftpd/vsftpd.conf.bak" ]; then
 
     mkdir -p /var/www/html

@@ -5,3 +5,4 @@ sudo service mariadb stop
 sudo docker image rm <image_id>
 sudo docker system prune -a   
 
+mruizzo.42.fr/wp-login.php

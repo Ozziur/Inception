@@ -394,7 +394,7 @@ CREATE TABLE `wp_users` (
 
 LOCK TABLES `wp_users` WRITE;
 /*!40000 ALTER TABLE `wp_users` DISABLE KEYS */;
-INSERT INTO `wp_users` VALUES (1,'mruizzo','$P$BFwyV/GXu8rhctqT40E4ozlZ9vAoQg/','mruizzo','vcbachelet@gmail.com','https://mruizzo.42.fr','2022-09-28 15:59:52','',0,'mruizzo');
+INSERT INTO `wp_users` VALUES (1,'mruizzo','$P$BFwyV/GXu8rhctqT40E4ozlZ9vAoQg/','mruizzo','casaruizzo@yahoo.it','https://mruizzo.42.fr','2023-03-08 15:59:52','',0,'mruizzo');
 /*!40000 ALTER TABLE `wp_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
